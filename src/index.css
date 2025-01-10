@@ -1,21 +1,45 @@
 :root {
-  --color-background: #6a00ff; /* Default background */
-  --color-font: #333333; /* Default font color */
-  --color-primary: #ff5722; /* Default primary color */
-  --font-default: Arial, sans-serif;
+  --amplify-colors-font-primary: #333;
+  --amplify-colors-font-secondary: #666;
+  --amplify-colors-background: #ffffff;
+  --amplify-colors-primary: #007bff;
 
+  --font-default: Arial, sans-serif;
+}
+
+/* Partner A Theme */
+[data-amplify-theme="partnerA"] {
+  --amplify-colors-font-primary: #111;
+  --amplify-colors-font-secondary: #444;
+  --amplify-colors-background: #15ff00;
+  --amplify-colors-primary: #28a745;
+
+  --font-default: "Courier New, monospace";
+}
+
+/* Partner B Theme */
+[data-amplify-theme="partnerB"] {
+  --amplify-colors-font-primary: #222;
+  --amplify-colors-font-secondary: #555;
+  --amplify-colors-background: #ff1ae8;
+  --amplify-colors-primary: #dc3545;
+
+  --font-default: monospace;
+}
+
+body {
   font-family: var(--font-default);
-  color: var(--color-font);
-  background-color: var(--color-background);
+  color: var(--amplify-colors-font-primary);
+  background-color: var(--amplify-colors-background);
 }
 
 a {
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--amplify-colors-primary);
   text-decoration: inherit;
 }
 a:hover {
-  color: lighten(var(--color-primary), 10%);
+  color: lighten(var(--amplify-colors-primary), 10%);
 }
 
 button {
@@ -25,11 +49,11 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: var(--font-default);
-  background-color: var(--color-primary);
-  color: var(--color-background);
+  background-color: var(--amplify-colors-primary);
+  color: var(--amplify-colors-background);
   cursor: pointer;
   transition: background-color 0.25s;
 }
 button:hover {
-  background-color: darken(var(--color-primary), 10%);
+  background-color: var(--amplify-colors-font-primary);
 }
